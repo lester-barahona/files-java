@@ -1,0 +1,14 @@
+public class Prueba{
+
+  public static void main(String [] args){
+  
+  Archivos archivos=new Archivos();
+  archivos.write("lety1");
+ System.out.println(archivos.read());
+   archivos.write("lety2");
+ System.out.println(archivos.read());
+
+  }
+
+
+}
