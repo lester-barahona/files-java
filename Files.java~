@@ -10,7 +10,7 @@ public class Files{
    
   public Files(){ }
   
-  public void initReader() {
+  public void initLectura() {
      try{     
        fReader=new FileReader(DOCUMENTO);
        bReader=new BufferedReader(fReader);      
@@ -19,7 +19,7 @@ public class Files{
      }   
   }
  
-  public void initWriter(boolean append) {
+  public void initEscritura(boolean append) {
       try{    
        fWriter=new FileWriter(DOCUMENTO,append);
        bWriter=new BufferedWriter(fWriter);
@@ -32,7 +32,7 @@ public class Files{
   
   public void write(String texto){
     try{
-      initWriter(true);
+      initEscritura(true);
       writer.println(texto);
       writer.flush();
       bWriter.close();
@@ -44,7 +44,7 @@ public class Files{
     String tmp="";
     String text="";
     try{
-      initReader();
+      initLectura();
       while((tmp=bReader.readLine())!=null){
         text+=tmp+"\n";
       }
